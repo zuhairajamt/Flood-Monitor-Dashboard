@@ -4,15 +4,15 @@
       <div class="carousel-inner border-radius-lg h-100">
         <div
           class="carousel-item h-100 active"
-          :style="{backgroundImage: `url(${carousel1})`,
+          :style="{backgroundColor: `white`,
       backgroundSize: 'cover'}"
         >
           <div class="carousel-caption d-none d-md-block bottom-0 text-start start-0 ms-5">
-            <div class="icon icon-shape icon-sm bg-white text-center border-radius-md mb-3">
+            <!-- <div class="icon icon-shape icon-sm bg-white text-center border-radius-md mb-3">
               <i class="ni ni-camera-compact text-dark opacity-10"></i>
-            </div>
-            <h5 class="text-white mb-1">Get started with Argon</h5>
-            <p>There’s nothing I really wanted to do in life that I wasn’t able to get good at.</p>
+            </div> -->
+            <h5 class="text-black mb-1">Ketinggian air</h5>
+            <iframe width="450" height="260" style="border: 1px solid #cccccc; " src="https://thingspeak.com/channels/1697274/widgets/552089"></iframe>
           </div>
         </div>
         <div

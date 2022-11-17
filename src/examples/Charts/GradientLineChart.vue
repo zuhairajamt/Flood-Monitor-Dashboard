@@ -1,17 +1,17 @@
 <template>
   <div class="card">
     <div class="pb-0 card-header mb-0">
-      <h6>{{ title }}</h6>
+      <h6> Data monitor </h6>
       <p class="text-sm">
-        <i class="fa fa-arrow-up text-success"></i>
+        <!-- <i class="fa fa-arrow-up text-success"></i> -->
         <span class="font-weight-bold">{{detail1}}</span>
-        {{detail2}}
+        <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1697274/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Keintinggian+Air&type=line"></iframe>
       </p>
     </div>
     <div class="p-3 card-body">
-      <div class="chart">
+      <!-- <div class="chart">
         <canvas id="chart-line" class="chart-canvas" height="300"></canvas>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -27,10 +27,10 @@ export default {
       type: String,
       default: "Sales overview",
     },
-    detail1: {
-      type: String,
-      default: "4% more",
-    },
+    // detail1: {
+    //   type: String,
+    //   default: "4% more",
+    // },
     detail2: {
       type: String,
       default: "in 2021",
