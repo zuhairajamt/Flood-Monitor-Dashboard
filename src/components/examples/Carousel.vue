@@ -1,67 +1,35 @@
 <template>
-  <div class="card card-carousel overflow-hidden h-100 p-0">
-    <div id="carouselExampleCaptions" class="carousel slide h-100" data-bs-ride="carousel">
-      <div class="carousel-inner border-radius-lg h-100">
-        <div
-          class="carousel-item h-100 active"
-          :style="{backgroundColor: `white`,
-      backgroundSize: 'cover'}"
-        >
-          <div class="carousel-caption d-none d-md-block bottom-0 text-start start-0 ms-5">
-            <!-- <div class="icon icon-shape icon-sm bg-white text-center border-radius-md mb-3">
+
+
+  <!-- <div class="icon icon-shape icon-sm bg-white text-center border-radius-md mb-3">
               <i class="ni ni-camera-compact text-dark opacity-10"></i>
             </div> -->
-            <h5 class="text-black mb-1">Ketinggian air</h5>
-            <iframe width="450" height="260" style="border: 1px solid #cccccc; " src="https://thingspeak.com/channels/1697274/widgets/552089"></iframe>
-          </div>
-        </div>
-        <div
-          class="carousel-item h-100"
-          :style="{backgroundImage: `url(${carousel2})`,
-      backgroundSize: 'cover'}"
-        >
-          <div class="carousel-caption d-none d-md-block bottom-0 text-start start-0 ms-5">
-            <div class="icon icon-shape icon-sm bg-white text-center border-radius-md mb-3">
-              <i class="ni ni-bulb-61 text-dark opacity-10"></i>
+  <!-- <div class="card">
+            <div class="pb-0 card-header mb-0">
+              <h6 class="text-black mb-1">Ketinggian air</h6>
+              <iframe width="450" height="260" style="border: 1px solid #cccccc; "
+                src="https://thingspeak.com/channels/1697274/widgets/552089"></iframe>
             </div>
-            <h5 class="text-white mb-1">Faster way to create web pages</h5>
-            <p>That’s my skill. I’m not really specifically talented at anything except for the ability to learn.</p>
-          </div>
-        </div>
-        <div
-          class="carousel-item h-100"
-          :style="{backgroundImage: `url(${carousel3})`,
-      backgroundSize: 'cover'}"
-        >
-          <div class="carousel-caption d-none d-md-block bottom-0 text-start start-0 ms-5">
-            <div class="icon icon-shape icon-sm bg-white text-center border-radius-md mb-3">
-              <i class="ni ni-trophy text-dark opacity-10"></i>
-            </div>
-            <h5 class="text-white mb-1">Share with us your design tips!</h5>
-            <p>Don’t be afraid to be wrong because you can’t learn anything from a compliment.</p>
-          </div>
-        </div>
-      </div>
-      <button
-        class="carousel-control-prev w-5 me-3"
-        type="button"
-        data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next w-5 me-3"
-        type="button"
-        data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+          </div> -->
+  <div class="card">
+    <div class="pb-0 card-header mb-0">
+      <h6> Data monitor </h6>
+      <p class="text-sm">
+        <!-- <i class="fa fa-arrow-up text-success"></i> -->
+        <!-- <span class="font-weight-bold">{{detail1}}</span> -->
+        <!-- <iframe width="450" height="260" style="border: 1px solid #cccccc;"
+          src="https://thingspeak.com/channels/1697274/widgets/552089"></iframe> -->
+        <iframe width="450" height="260" style="border: 1px solid #cccccc;"
+          src="https://thingspeak.com/channels/1697274/widgets/553103"></iframe>
+      </p>
+    </div>
+    <div class="p-3 card-body">
+      <!-- <div class="chart">
+        <canvas id="chart-line" class="chart-canvas" height="300"></canvas>
+      </div> -->
     </div>
   </div>
+
 </template>
 
 <script>

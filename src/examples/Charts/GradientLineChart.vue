@@ -4,7 +4,7 @@
       <h6> Data monitor </h6>
       <p class="text-sm">
         <!-- <i class="fa fa-arrow-up text-success"></i> -->
-        <span class="font-weight-bold">{{detail1}}</span>
+        <!-- <span class="font-weight-bold">{{detail1}}</span> -->
         <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1697274/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Keintinggian+Air&type=line"></iframe>
       </p>
     </div>

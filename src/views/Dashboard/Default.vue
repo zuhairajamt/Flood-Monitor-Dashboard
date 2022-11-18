@@ -4,11 +4,11 @@
       <div class="col-lg-12">
         <div class="row">
           <div class="col-lg-3 col-md-6 col-12">
-            <card :title="stats.money.title" :value="posts.field1" :percentage="posts.field1" :iconClass="stats.money.iconClass"
+            <card :title="stats.money.title" :value="posts.field1" :percentage="posts.entry_id + ' data'" :iconClass="stats.money.iconClass"
               :iconBackground="stats.money.iconBackground" :detail="stats.money.detail" directionReverse></card>
           </div>
           <div class="col-lg-3 col-md-6 col-12">
-            <card :title="stats.users.title" :value="posts.field1" :percentage="posts.field1"
+            <card :title="stats.users.title" :value="postsAverage.field1 + ' data'" :percentage="postsAverage.entry_id + ' data'"
               :iconClass="stats.users.iconClass" :iconBackground="stats.users.iconBackground"
               :detail="stats.users.detail" directionReverse></card>
           </div>
@@ -107,8 +107,10 @@ export default {
   methods: {
     async getData() {
       try {
-        let response = await fetch("https://api.thingspeak.com/channels/1697274/feeds/last.json?api_key=H0685QH7XD5JWRQ7");
+        let response = await fetch(import.meta.env.VITE_BASE_API_URL);
+        let responseAverage = await fetch(import.meta.env.VITE_BASE_API_AVERAGE);
         this.posts = await response.json();
+        this.postsAverage = await responseAverage.json();
       } catch (error) {
         console.log(error);
       }
@@ -120,22 +122,23 @@ export default {
   data() {
     return {
       posts: [],
+      postsAverage: [],
       stats: {
         money: {
           title: "Ketinggian Terakhir",
           value: "$53,000",
           percentage: "",
-          iconClass: "ni ni-money-coins",
-          detail: "",
+          iconClass: "ni ni-world",
+          detail: " dari terkahir",
           iconBackground: "bg-gradient-primary",
         },
         users: {
-          title: "Today's Users",
+          title: "Rata-rata Ketinggian Air",
           value: "2,300",
-          percentage: "+3%",
+          percentage: "",
           iconClass: "ni ni-world",
           iconBackground: "bg-gradient-danger",
-          detail: "since last week",
+          detail: " dari terkahir",
         },
         clients: {
           title: "New Clients",

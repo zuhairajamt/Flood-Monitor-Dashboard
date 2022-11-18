@@ -1,6 +1,7 @@
 const auth = {
   path: "/",
-  name: "Auth",
+  name: "Home",
+  component: ()=> import('@/views/Dashboard/Default.vue'),
   children: [
     {
       path: "/auth/signin",
