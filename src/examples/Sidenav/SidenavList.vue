@@ -8,13 +8,13 @@
           </template>
         </sidenav-item>
       </li>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <sidenav-item url="/dashboard/tables" :class="getRoute() === 'tables' ? 'active' : ''" :navText="this.$store.state.isRTL ? 'الجداول' : 'Tables'">
           <template v-slot:icon>
             <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
           </template>
         </sidenav-item>
-      </li>
+      </li> -->
       <!-- <li class="nav-item">
         <sidenav-item url="/dashboard/billing" :class="getRoute() === 'billing' ? 'active' : ''" :navText="this.$store.state.isRTL ? 'الفواتیر' : 'Billing'">
           <template v-slot:icon>

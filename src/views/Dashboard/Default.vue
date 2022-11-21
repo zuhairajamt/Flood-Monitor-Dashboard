@@ -18,7 +18,7 @@
               :percentageColor="stats.clients.percentageColor" :detail="stats.clients.detail" directionReverse></card>
           </div>
           <div class="col-lg-3 col-md-6 col-12">
-            <card :title="stats.sales.title" :value="stats.sales.value" :percentage="stats.sales.percentage"
+            <card :title="stats.sales.title" :value="stsFlood" :percentage="stsMsg"
               :iconClass="stats.sales.iconClass" :iconBackground="stats.sales.iconBackground"
               :detail="stats.sales.detail" directionReverse></card>
           </div>
@@ -115,14 +115,35 @@ export default {
         console.log(error);
       }
     },
+    async statusFlood() {
+      try {
+        if(this.posts.field1 <= 10) {
+          //let sts = 'Awas';
+          this.stsFlood = 'Awas';
+          this.stsMsg = 'Segera evakuasi';
+          // return sts; 
+        } else if (this.posts.field1 <= 20) {
+          this.stsFlood = 'Siaga';
+          this.stsMsg = 'Pintu dibuka';
+        } else {
+          this.stsFlood = 'Aman';
+          this.stsMsg = 'Terdeteksi aman';
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    }
   },
   created() {
     this.getData();
+    this.statusFlood();
   },
   data() {
     return {
       posts: [],
       postsAverage: [],
+      stsFlood: 'Aman',
+      stsMsg: 'Terdeteksi aman',
       stats: {
         money: {
           title: "Ketinggian Terakhir",
@@ -141,21 +162,21 @@ export default {
           detail: " dari terkahir",
         },
         clients: {
-          title: "New Clients",
-          value: "+3,462",
-          percentage: "-2%",
+          title: "Curah Hujan",
+          value: "-",
+          percentage: "",
           iconClass: "ni ni-paper-diploma",
           percentageColor: "text-danger",
           iconBackground: "bg-gradient-success",
-          detail: "since last quarter",
+          detail: "-",
         },
         sales: {
-          title: "Sales",
-          value: "$103,430",
+          title: "Status",
+          value: 'statusFlood',
           percentage: "+5%",
           iconClass: "ni ni-cart",
           iconBackground: "bg-gradient-warning",
-          detail: "than last month",
+          detail: "",
         },
       },
       sales: {
