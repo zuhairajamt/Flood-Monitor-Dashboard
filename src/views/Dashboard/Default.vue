@@ -162,7 +162,7 @@ export default {
           detail: " dari terkahir",
         },
         clients: {
-          title: "Curah Hujan",
+          title: "Flow Meter",
           value: "-",
           percentage: "",
           iconClass: "ni ni-paper-diploma",
